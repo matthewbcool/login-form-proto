@@ -141,6 +141,7 @@
   transform: rotate(69deg);
   transition-duration: 0.5s;
   transition-timing-function: ease-in;
+
 }
 
 .profile-pic-end {
@@ -212,6 +213,7 @@
   position: absolute;
   top: 240px;
   right: 320px;
+
   transition-duration: 0.5s;
   transition-timing-function: ease-in;
 }

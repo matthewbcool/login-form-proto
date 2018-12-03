@@ -13,6 +13,7 @@ class App extends React.Component {
   state = {
     toggleTab: false,
     currentTextBoxOne: "text-box-one-default text-box-one-start",
+
     currentProfilePic: "profile-pic-default profile-pic-start",
     currentSwitches: "switches-default switches-start",
     currentImageOne: "image-one-default image-one-start",
@@ -89,6 +90,15 @@ class App extends React.Component {
             {this.state.toggleTab ? <Signup /> : <Login />}
           </div>
           <img
+
+
+            className="textboxes svg"
+            src={
+              "https://uploads.codesandbox.io/uploads/user/6b33088d-d1ff-4935-9b1e-8327c9a0dfa7/KeG3-Textboxes.svg"
+            }
+            alt="textboxes-wire-frame"
+          />
+          <img
             className={this.state.currentProfilePic}
             src={
               "https://uploads.codesandbox.io/uploads/user/6b33088d-d1ff-4935-9b1e-8327c9a0dfa7/oRcK-profile-wire.svg"
@@ -109,6 +119,7 @@ class App extends React.Component {
             }
             alt="wire-frame-one"
           />
+
           <img
             className={this.state.currentSwitches}
             src={

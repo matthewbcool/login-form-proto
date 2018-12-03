@@ -11,19 +11,33 @@ class App extends React.Component {
     this.changeTab = this.changeTab.bind(this);
   }
   state = {
-    toggleTab: true,
-    textBoxOne: "svg"
+    toggleTab: false,
+    currentTextBoxOne: "text-box-one-default text-box-one-start",
+    currentProfilePic: "profile-pic-default profile-pic-start"
   };
 
   changeTab = () => {
+    this.setSvgClasses();
     this.state.toggleTab
-      ? this.setState({ toggleTab: false })
-      : this.setState({ toggleTab: true });
-    this.addImgLocations();
+      ? this.setState({
+          toggleTab: false
+        })
+      : this.setState({
+          toggleTab: true
+        });
   };
 
-  addImgLocations = () => {
-    this.setState({ textBoxOne: "text-box-one svg" });
+  setSvgClasses = () => {
+    this.state.toggleTab
+      ? this.setState({
+          currentTextBoxOne: "text-box-one-default text-box-one-end",
+          currentProfilePic: "profile-pic-default profile-pic-end"
+        })
+      : this.setState({
+          currentTextBoxOne: "text-box-one-default text-box-one-start",
+          currentProfilePic: "profile-pic-default profile-pic-start"
+        });
+    console.log(this.state.toggleTab, this.state.currentTextBoxOne);
   };
 
   render() {
@@ -41,23 +55,23 @@ class App extends React.Component {
             <div className="tab-container">
               {this.state.toggleTab ? (
                 <div
-                  className="select-tab selected-tab"
+                  className="reg-tab select-tab selected-tab"
                   onClick={this.changeTab}
                 >
                   REGISTER
                 </div>
               ) : (
-                <div className="select-tab" onClick={this.changeTab}>
+                <div className="reg-tab select-tab" onClick={this.changeTab}>
                   REGISTER
                 </div>
               )}
               {this.state.toggleTab ? (
-                <div className="select-tab" onClick={this.changeTab}>
+                <div className="log-tab select-tab" onClick={this.changeTab}>
                   LOG IN
                 </div>
               ) : (
                 <div
-                  className="select-tab selected-tab"
+                  className="log-tab select-tab selected-tab"
                   onClick={this.changeTab}
                 >
                   LOG IN
@@ -74,7 +88,7 @@ class App extends React.Component {
             alt="textboxes-wire-frame"
           />
           <img
-            className="svg"
+            className={this.state.currentProfilePic}
             src={
               "https://uploads.codesandbox.io/uploads/user/6b33088d-d1ff-4935-9b1e-8327c9a0dfa7/oRcK-profile-wire.svg"
             }
@@ -94,13 +108,7 @@ class App extends React.Component {
             }
             alt="switches"
           />
-          <img
-            className="svg"
-            src={
-              "https://uploads.codesandbox.io/uploads/user/6b33088d-d1ff-4935-9b1e-8327c9a0dfa7/WbRW-image.svg"
-            }
-            alt="picture-wire-frame-two"
-          />
+
           <img
             className="svg"
             src={
@@ -109,7 +117,7 @@ class App extends React.Component {
             alt="picture-wire-frame-three"
           />
           <img
-            className={this.state.textBoxOne}
+            className={this.state.currentTextBoxOne}
             src={
               "https://uploads.codesandbox.io/uploads/user/6b33088d-d1ff-4935-9b1e-8327c9a0dfa7/KeG3-Textboxes.svg"
             }

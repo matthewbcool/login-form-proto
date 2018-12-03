@@ -37,6 +37,7 @@ export default class Signup extends React.Component {
               placeholder="Repeat Password"
             />
           </div>
+          <button className="login-btn">SIGNUP</button>
         </form>
       </div>
     );

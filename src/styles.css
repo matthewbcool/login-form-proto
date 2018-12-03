@@ -34,24 +34,20 @@
   border: solid 1px #cecece;
   border-radius: 50%;
 }
-
+/***************SignUp/Login********************/
 .login-wrapper {
   width: 290px;
-  border: solid 5px #edad17;
-  border-radius: 10px;
   margin: auto;
 }
 
 .tab-container {
-  background-color: #ffe4a5;
   display: flex;
   justify-content: space-around;
   width: 230px;
-  color: #9b6c00;
   font-weight: bold;
+  color: grey;
   font-size: 20px;
-  padding: 30px;
-  border-radius: 2px;
+  padding: 30px 30px 3px 30px;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -59,17 +55,26 @@
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /*supported by Chrome and Opera */
 }
+
+.reg-tab {
+  width: 104px;
+}
+
+.select-tab {
+  height: 30px;
+  padding-top: 10px;
+}
 .selected-tab {
-  text-shadow: black 1px 1px 1px;
-  border-bottom: 1.5px solid black;
+  border-bottom: 2px solid #edad17;
+  color: #edad17;
   transition-duration: 0.2s;
-  transform: scale(1.01);
   transition-timing-function: linear;
 }
 
 .form-input {
   border-radius: 7px;
   margin: 10px;
+  width: 200px;
   height: 25px;
 }
 .form-input:focus {
@@ -85,6 +90,17 @@
   justify-content: center;
 }
 
+.login-btn {
+  height: 40px;
+  width: 210px;
+  font-size: 20px;
+  background: linear-gradient(#edad17, #9b6c00);
+  border-radius: 5px;
+  margin: 10px;
+  color: #ececec;
+  box-shadow: 0px 0px 10px #ececec;
+}
+
 /***************SVG STUFF********************/
 .svg {
   position: relative;
@@ -92,16 +108,110 @@
   width: 25%;
 }
 
-.text-box-one {
-  border: #9b6c00 solid 1px;
+.text-box-one-default {
+  height: 25%;
+  width: 25%;
+}
+.text-box-one-start {
   position: absolute;
-  top: 400px;
-  right: 200px;
+  top: 600px;
+  right: -40px;
+  transform: rotate(40deg);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.text-box-one-end {
+  position: absolute;
+  top: 600px;
+  right: 210px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.profile-pic-default {
+  height: 11%;
+  width: 11%;
+}
+
+.profile-pic-start {
+  position: absolute;
+  top: 550px;
+  right: 960px;
+  transform: rotate(69deg);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.profile-pic-end {
+  position: absolute;
+  top: 50px;
+  right: 900px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.switches-default {
+  height: 11%;
+  width: 11%;
+}
+
+.switches-start {
+  position: absolute;
+  top: 450px;
+  right: 100px;
+  transform: rotate(10deg);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.switches-end {
+  position: absolute;
+  top: 50px;
+  right: 130px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.image-one-default {
+  height: 35%;
+  width: 45%;
+}
+
+.image-one-start {
+  position: absolute;
+  top: 650px;
+  right: 300px;
+  transform: scale(0.1);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
 }
 
 .image-one-end {
-  border: #9b6c00 solid 1px;
   position: absolute;
-  top: 400px;
-  right: 200px;
+  top: 480px;
+  right: 490px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+.banner-default {
+  height: 35%;
+  width: 45%;
+}
+
+.banner-start {
+  position: absolute;
+  top: 330px;
+  right: 310px;
+  transform: rotate(10deg);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.banner-end {
+  position: absolute;
+  top: 240px;
+  right: 320px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
 }

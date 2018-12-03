@@ -13,7 +13,11 @@ class App extends React.Component {
   state = {
     toggleTab: false,
     currentTextBoxOne: "text-box-one-default text-box-one-start",
-    currentProfilePic: "profile-pic-default profile-pic-start"
+
+    currentProfilePic: "profile-pic-default profile-pic-start",
+    currentSwitches: "switches-default switches-start",
+    currentImageOne: "image-one-default image-one-start",
+    currentBanner: "banner-default banner-start"
   };
 
   changeTab = () => {
@@ -31,13 +35,18 @@ class App extends React.Component {
     this.state.toggleTab
       ? this.setState({
           currentTextBoxOne: "text-box-one-default text-box-one-end",
-          currentProfilePic: "profile-pic-default profile-pic-end"
+          currentProfilePic: "profile-pic-default profile-pic-end",
+          currentSwitches: "switches-default switches-end",
+          currentImageOne: "image-one-default image-one-end",
+          currentBanner: "banner-default banner-end"
         })
       : this.setState({
           currentTextBoxOne: "text-box-one-default text-box-one-start",
-          currentProfilePic: "profile-pic-default profile-pic-start"
+          currentProfilePic: "profile-pic-default profile-pic-start",
+          currentSwitches: "switches-default switches-start",
+          currentImageOne: "image-one-default image-one-start",
+          currentBanner: "banner-default banner-start"
         });
-    console.log(this.state.toggleTab, this.state.currentTextBoxOne);
   };
 
   render() {
@@ -81,6 +90,8 @@ class App extends React.Component {
             {this.state.toggleTab ? <Signup /> : <Login />}
           </div>
           <img
+
+
             className="textboxes svg"
             src={
               "https://uploads.codesandbox.io/uploads/user/6b33088d-d1ff-4935-9b1e-8327c9a0dfa7/KeG3-Textboxes.svg"
@@ -95,26 +106,26 @@ class App extends React.Component {
             alt="profile-wire"
           />
           <img
-            className="svg"
+            className={this.state.currentBanner}
+            src={
+              "https://uploads.codesandbox.io/uploads/user/6b33088d-d1ff-4935-9b1e-8327c9a0dfa7/eGUj-welcomebanner.svg"
+            }
+            alt="banner"
+          />
+          <img
+            className={this.state.currentImageOne}
             src={
               "https://uploads.codesandbox.io/uploads/user/6b33088d-d1ff-4935-9b1e-8327c9a0dfa7/WbRW-image.svg"
             }
-            alt="picture-wire-frame-one"
+            alt="wire-frame-one"
           />
+
           <img
-            className="svg"
+            className={this.state.currentSwitches}
             src={
               "https://uploads.codesandbox.io/uploads/user/6b33088d-d1ff-4935-9b1e-8327c9a0dfa7/8bqn-switches.svg"
             }
             alt="switches"
-          />
-
-          <img
-            className="svg"
-            src={
-              "https://uploads.codesandbox.io/uploads/user/6b33088d-d1ff-4935-9b1e-8327c9a0dfa7/WbRW-image.svg"
-            }
-            alt="picture-wire-frame-three"
           />
           <img
             className={this.state.currentTextBoxOne}

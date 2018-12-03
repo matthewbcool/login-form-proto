@@ -45,6 +45,7 @@
   justify-content: space-around;
   width: 230px;
   font-weight: bold;
+  color: grey;
   font-size: 20px;
   padding: 30px 30px 3px 30px;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -57,9 +58,6 @@
 
 .reg-tab {
   width: 104px;
-}
-
-.log-tab {
 }
 
 .select-tab {
@@ -125,9 +123,8 @@
 
 .text-box-one-end {
   position: absolute;
-  border: 1px solid red;
-  top: 550px;
-  right: 160px;
+  top: 600px;
+  right: 210px;
   transition-duration: 0.5s;
   transition-timing-function: ease-in;
 }
@@ -144,13 +141,79 @@
   transform: rotate(69deg);
   transition-duration: 0.5s;
   transition-timing-function: ease-in;
+
 }
 
 .profile-pic-end {
   position: absolute;
-  border: 1px solid red;
   top: 50px;
-  right: 880px;
+  right: 900px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.switches-default {
+  height: 11%;
+  width: 11%;
+}
+
+.switches-start {
+  position: absolute;
+  top: 450px;
+  right: 100px;
+  transform: rotate(10deg);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.switches-end {
+  position: absolute;
+  top: 50px;
+  right: 130px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.image-one-default {
+  height: 35%;
+  width: 45%;
+}
+
+.image-one-start {
+  position: absolute;
+  top: 650px;
+  right: 300px;
+  transform: scale(0.1);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.image-one-end {
+  position: absolute;
+  top: 480px;
+  right: 490px;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+.banner-default {
+  height: 35%;
+  width: 45%;
+}
+
+.banner-start {
+  position: absolute;
+  top: 330px;
+  right: 310px;
+  transform: rotate(10deg);
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.banner-end {
+  position: absolute;
+  top: 240px;
+  right: 320px;
+
   transition-duration: 0.5s;
   transition-timing-function: ease-in;
 }
